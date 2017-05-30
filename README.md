@@ -1,6 +1,6 @@
-# CanvasCameraDemo
+# Cordova CanvasCamera Plugin Demo
 
-A sample Apache Cordova application that uses the canvas camera plugin.
+A sample Apache Cordova application that uses the CanvasCamera plugin.
 
 ## Supported Platforms
 
