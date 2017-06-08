@@ -37,19 +37,18 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-
-        document.getElementById('play').addEventListener('click', () => {
+        document.getElementById('play').addEventListener('click', (function() {
             this.onPlay();
-        }, false);
-        document.getElementById('stop').addEventListener('click', () => {
+        }).bind(this), false);
+        document.getElementById('stop').addEventListener('click', (function() {
             this.onStop();
-        }, false);
-        document.getElementById('switch').addEventListener('click', () => {
+        }).bind(this), false);
+        document.getElementById('switch').addEventListener('click', (function() {
             this.onSwitch();
-        }, false);
-        document.getElementById('torch').addEventListener('click', () => {
+        }).bind(this), false);
+        document.getElementById('torch').addEventListener('click', (function() {
             this.onTorch();
-        }, false);
+        }).bind(this), false);
 
         if (window.plugin.CanvasCamera) {
           window.plugin.CanvasCamera.initialize({
@@ -70,6 +69,7 @@ var app = {
                 width: 640,
                 height: 480
               },
+              use: 'data',
               fps: 30,
               flashMode: this.flash,
               hasThumbnail: true,
