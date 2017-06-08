@@ -69,7 +69,7 @@ var app = {
                 width: 640,
                 height: 480
               },
-              use: 'data',
+              use: 'file',
               fps: 30,
               flashMode: this.flash,
               hasThumbnail: true,

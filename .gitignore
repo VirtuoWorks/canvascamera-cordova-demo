@@ -1,6 +1,8 @@
-node_modules
-node_modules/*
-platforms
-platforms/*
+.DS_Store
+
 plugins
 plugins/*
+platforms
+platforms/*
+node_modules
+node_modules/*
