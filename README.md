@@ -1,4 +1,4 @@
-[![Codacy Badge][codacity-image]][codacity-url]
+[![Codacy Badge][codacy-image]][codacy-url]
 
 # Cordova CanvasCamera Plugin Demo
 
@@ -62,5 +62,5 @@ cordova run ios
 
 This software is released under the [MIT License](LICENSE).
 
-[codacity-image]: https://api.codacy.com/project/badge/Grade/e507ea2658364d0cb23918c87b2d1158
-[codacity-url]: https://www.codacy.com/app/VirtuoWorks/CanvasCameraDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
+[codacy-image]: https://api.codacy.com/project/badge/Grade/e507ea2658364d0cb23918c87b2d1158
+[codacy-url]: https://www.codacy.com/app/VirtuoWorks/CanvasCameraDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
