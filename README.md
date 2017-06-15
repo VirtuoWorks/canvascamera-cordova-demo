@@ -1,4 +1,5 @@
 [![Codacy Badge][codacy-image]][codacy-url]
+[![Dependency Status][dependencyci-image]][dependencyci-url]
 
 # Cordova CanvasCamera Plugin Demo
 
@@ -64,3 +65,6 @@ This software is released under the [MIT License](LICENSE).
 
 [codacy-image]: https://api.codacy.com/project/badge/Grade/e507ea2658364d0cb23918c87b2d1158
 [codacy-url]: https://www.codacy.com/app/VirtuoWorks/CanvasCameraDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
+[dependencyci-image]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo/badge
+[dependencyci-url]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo
+
