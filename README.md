@@ -39,10 +39,16 @@ cordova platform add android
 cordova platform add ios
 ```
 
-### Install Canvas Camera plugin :
+The plugin is listed as a project dependency in the npm ```package.json``` file and Cordova ```config.xml``` file. 
+
+When adding any platform, Cordova should install automatically the Canvas Camera plugin into the demo project.
+
+You can check that the plugin has been properly installed by checking the ```\plugins\``` directory inside your project directory.
+
+### Prepare the project :
 
 ```bash
-cordova plugin add https://github.com/VirtuoWorks/CanvasCameraPlugin.git && cordova prepare
+cordova prepare
 ```
 
 ### Start the application :
@@ -59,6 +65,21 @@ cordova run android
 cordova run ios
 ```
 
+## If the plugin was not installed :
+
+### Try to remove Canvas Camera plugin :
+
+```bash
+cordova plugin remove com.virtuoworks.cordova-plugin-canvascamera
+```
+
+### Try to install Canvas Camera plugin :
+
+```bash
+cordova plugin add https://github.com/VirtuoWorks/CanvasCameraPlugin.git && cordova prepare
+```
+*Notice :* This will not work after having prepared any platform while using npm >=5. The plugin is already installed as a project dependency (check your ```\plugins\``` directory). The latest npm dependency management system uses a ```package-lock.json``` file which will prevent you from installing the plugin again.
+
 ## License
 
 This software is released under the [MIT License](LICENSE).
@@ -67,4 +88,3 @@ This software is released under the [MIT License](LICENSE).
 [codacy-url]: https://www.codacy.com/app/VirtuoWorks/CanvasCameraDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
 [dependencyci-image]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo/badge
 [dependencyci-url]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo
-
