@@ -24,5 +24,4 @@
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="com.virtuoworks.cordova-plugin-canvascamera" spec="https://github.com/VirtuoWorks/CanvasCameraPlugin.git" />
-    <engine name="android" spec="~7.0.0" />
 </widget>
