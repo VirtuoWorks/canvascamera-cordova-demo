@@ -23,5 +23,4 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="com.virtuoworks.cordova-plugin-canvascamera" spec="https://github.com/VirtuoWorks/CanvasCameraPlugin.git" />
 </widget>
