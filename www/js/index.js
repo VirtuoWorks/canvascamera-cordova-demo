@@ -83,6 +83,31 @@ var app = {
           });
         }
     },
+    onFlip: function() {
+        console.log('flip');
+        if (window.plugin.CanvasCamera) {
+            if (this.flipped) {
+                var scaleH = 1;
+                var scaleV = 1;
+            } else {
+                var scaleH = -1;
+                var scaleV = -1;
+            }
+            if (!this.flipListenerAdded) {
+                this.flipListenerAdded = true;
+                window.plugin.CanvasCamera.beforeFrameRendering(function(event, frame){
+                    this.context.save();
+                    frame.dWidth   = frame.dWidth * scaleH;
+                    frame.dHeight  = frame.dHeight * scaleV;
+                    this.context.scale(scaleH, scaleV); 
+                });
+                window.plugin.CanvasCamera.afterFrameRendering(function(event, frame){
+                    this.context.restore();
+                });
+
+            }
+        }
+    },
     flash: false,
     onTorch: function() {
         console.log('torch');

@@ -75,6 +75,13 @@ div.play {
 div.play:hover {
   background-color: green;
 }
+/* FLip action */
+div.flip {
+  background-color: pink;
+}
+div.flip:hover {
+  background-color: lightpink;
+}
 /* Switch action */
 div.switch {
   background-color: lightblue;
@@ -89,7 +96,6 @@ div.stop {
 div.stop:hover {
   background-color: red;
 }
-
 /* Torch action */
 div.torch {
   background-color: lightyellow;
