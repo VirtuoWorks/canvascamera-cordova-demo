@@ -1,6 +1,6 @@
 .DS_Store
-.vs_code
-.vs_code/*
+.vscode
+.vscode/*
 plugins
 plugins/*
 platforms
