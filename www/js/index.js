@@ -40,6 +40,9 @@ var app = {
         document.getElementById('play').addEventListener('click', (function() {
             this.onPlay();
         }).bind(this), false);
+        document.getElementById('flip').addEventListener('click', (function() {
+            this.onFlip();
+        }).bind(this), false);
         document.getElementById('stop').addEventListener('click', (function() {
             this.onStop();
         }).bind(this), false);
@@ -52,8 +55,8 @@ var app = {
 
         if (window.plugin.CanvasCamera) {
           window.plugin.CanvasCamera.initialize({
-                fullsize: window.document.getElementById('fullsize'),
-                thumbnail: window.document.getElementById('thumbnail')
+                fullsize: window.document.getElementById('fullsize')/*,
+                thumbnail: window.document.getElementById('thumbnail')*/
           });
         }
     },
@@ -62,18 +65,18 @@ var app = {
         if (window.plugin.CanvasCamera) {
            var options = {
               canvas: {
-                width: 640,
-                height: 480
+                width: 320,
+                height: 240
               },
               capture: {
-                width: 640,
-                height: 480
+                width: 320,
+                height: 240
               },
               use: 'file',
               fps: 30,
               flashMode: this.flash,
-              hasThumbnail: true,
-              thumbnailRatio: 1/6,
+              //hasThumbnail: true,
+              //thumbnailRatio: 1/6,
               cameraFacing: this.position
           };
           window.plugin.CanvasCamera.start(options, function(error) {
@@ -83,28 +86,33 @@ var app = {
           });
         }
     },
+    flip: {},
     onFlip: function() {
         console.log('flip');
         if (window.plugin.CanvasCamera) {
-            if (this.flipped) {
-                var scaleH = 1;
-                var scaleV = 1;
+            var self = this;
+            if (self.flip.flipped) {
+                self.flip.scaleH = 1;
+                self.flip.scaleV = 1;
+                self.flip.flipped = false;
             } else {
-                var scaleH = -1;
-                var scaleV = -1;
+                self.flip.scaleH = -1;
+                self.flip.scaleV = -1;
+                self.flip.flipped = true;
             }
-            if (!this.flipListenerAdded) {
-                this.flipListenerAdded = true;
+            console.log(self.flip);
+            if (!self.flip.listener) {
+                self.flip.listener = true;
                 window.plugin.CanvasCamera.beforeFrameRendering(function(event, frame){
                     this.context.save();
-                    frame.dWidth   = frame.dWidth * scaleH;
-                    frame.dHeight  = frame.dHeight * scaleV;
-                    this.context.scale(scaleH, scaleV); 
+                    frame.dWidth   = frame.dWidth * self.flip.scaleH;
+                    frame.dHeight  = frame.dHeight * self.flip.scaleV;
+                    this.context.scale(self.flip.scaleH, self.flip.scaleV); 
+                    console.log(self.flip.scaleH, self.flip.scaleV);
                 });
                 window.plugin.CanvasCamera.afterFrameRendering(function(event, frame){
                     this.context.restore();
                 });
-
             }
         }
     },
