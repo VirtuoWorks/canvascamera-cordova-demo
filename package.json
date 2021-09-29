@@ -1,6 +1,6 @@
 {
     "name": "io.cordova.canvascamerademo",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "displayName": "CanvasCameraDemo",
     "cordova": {
         "platforms": [
@@ -13,8 +13,10 @@
     },
     "dependencies": {
         "com.virtuoworks.cordova-plugin-canvascamera": "^1.2.0",
-        "cordova-android": "^8.0.0",
-        "cordova-plugin-compat": "^1.2.0",
-        "cordova-plugin-whitelist": "1"
+        "cordova-android": "^10.1.1"
+    },
+    "devDependencies": {
+        "cordova": "^10.0.0",
+        "npm-check-updates": "^11.8.5"
     }
 }
