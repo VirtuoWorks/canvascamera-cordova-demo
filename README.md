@@ -1,6 +1,5 @@
 [![Codacy Badge][codacy-image]][codacy-url]
-[![Dependency Status][dependencyci-image]][dependencyci-url]
-
+[![Libraries.io Badge][libraries-io-image]][libraries-io-url]
 # Cordova CanvasCamera Plugin Demo
 
 A sample Apache Cordova application that uses the CanvasCamera plugin.
@@ -12,7 +11,7 @@ A sample Apache Cordova application that uses the CanvasCamera plugin.
 
 ## Dependencies
 
-- Git 
+- Git
 - NodeJS
 - Apache Cordova
 - Android Studio and SDK and/or Xcode and iOS SDK
@@ -39,7 +38,7 @@ cordova platform add android
 cordova platform add ios
 ```
 
-The plugin is listed as a project dependency in the npm ```package.json``` file and Cordova ```config.xml``` file. 
+The plugin is listed as a project dependency in the npm ```package.json``` file and Cordova ```config.xml``` file.
 
 When adding any platform, Cordova should install automatically the Canvas Camera plugin into the demo project.
 
@@ -78,13 +77,14 @@ cordova plugin remove com.virtuoworks.cordova-plugin-canvascamera
 ```bash
 cordova plugin add https://github.com/VirtuoWorks/CanvasCameraPlugin.git && cordova prepare
 ```
+
 *Notice :* This will not work after having prepared any platform while using npm >=5. The plugin is already installed as a project dependency (check your ```\plugins\``` directory). The latest npm dependency management system uses a ```package-lock.json``` file which will prevent you from installing the plugin again.
 
 ## License
 
 This software is released under the [MIT License](LICENSE).
 
-[codacy-image]: https://api.codacy.com/project/badge/Grade/e507ea2658364d0cb23918c87b2d1158
-[codacy-url]: https://www.codacy.com/app/VirtuoWorks/CanvasCameraDemo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
-[dependencyci-image]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo/badge
-[dependencyci-url]: https://dependencyci.com/github/VirtuoWorks/CanvasCameraDemo
+[codacy-image]: https://app.codacy.com/project/badge/Grade/457a91536ddb4113831d8da421ca33f4
+[codacy-url]: https://www.codacy.com/gh/VirtuoWorks/CanvasCameraDemo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=VirtuoWorks/CanvasCameraDemo&amp;utm_campaign=Badge_Grade
+[libraries-io-image]: https://img.shields.io/librariesio/github/VirtuoWorks/CanvasCameraDemo
+[libraries-io-url]: https://libraries.io/github/VirtuoWorks/CanvasCameraDemo
