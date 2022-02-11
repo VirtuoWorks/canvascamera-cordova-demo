@@ -7,16 +7,15 @@
             "android"
         ],
         "plugins": {
-            "cordova-plugin-whitelist": {},
             "com.virtuoworks.cordova-plugin-canvascamera": {}
         }
     },
     "dependencies": {
-        "com.virtuoworks.cordova-plugin-canvascamera": "^1.2.0",
-        "cordova-android": "^10.1.1"
+        "com.virtuoworks.cordova-plugin-canvascamera": "file:../CanvasCameraPlugin"
     },
     "devDependencies": {
         "cordova": "^10.0.0",
+        "cordova-android": "^10.1.1",
         "npm-check-updates": "^11.8.5"
     }
 }
