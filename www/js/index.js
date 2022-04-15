@@ -55,8 +55,8 @@ var app = {
 
         if (window.plugin.CanvasCamera) {
           window.plugin.CanvasCamera.initialize({
-                fullsize: window.document.getElementById('fullsize')/*,
-                thumbnail: window.document.getElementById('thumbnail')*/
+                fullsize: window.document.getElementById('fullsize'),
+                thumbnail: window.document.getElementById('thumbnail')
           });
         }
     },
@@ -72,17 +72,17 @@ var app = {
                 width: 320,
                 height: 240
               },
-              use: 'file',
+              use: 'data',
               fps: 30,
               flashMode: this.flash,
-              //hasThumbnail: true,
-              //thumbnailRatio: 1/6,
+              hasThumbnail: true,
+              thumbnailRatio: 1/6,
               cameraFacing: this.position
           };
           window.plugin.CanvasCamera.start(options, function(error) {
             console.log('[CanvasCamera start]', 'error', error);
           }, function(data) {
-            // console.log('[CanvasCamera start]', 'data', data);
+            console.log('[CanvasCamera start]', 'data', data);
           });
         }
     },
@@ -107,7 +107,7 @@ var app = {
                     this.context.save();
                     frame.dWidth   = frame.dWidth * self.flip.scaleH;
                     frame.dHeight  = frame.dHeight * self.flip.scaleV;
-                    this.context.scale(self.flip.scaleH, self.flip.scaleV); 
+                    this.context.scale(self.flip.scaleH, self.flip.scaleV);
                     console.log(self.flip.scaleH, self.flip.scaleV);
                 });
                 window.plugin.CanvasCamera.afterFrameRendering(function(event, frame){

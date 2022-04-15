@@ -1,6 +1,6 @@
 {
     "name": "io.cordova.canvascamerademo",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "displayName": "CanvasCameraDemo",
     "cordova": {
         "platforms": [
@@ -10,12 +10,16 @@
             "com.virtuoworks.cordova-plugin-canvascamera": {}
         }
     },
-    "dependencies": {
-        "com.virtuoworks.cordova-plugin-canvascamera": "file:../CanvasCameraPlugin"
+    "scripts": {
+        "install-current": "cordova plugin add com.virtuoworks.cordova-plugin-canvascamera && cordova platform remove android && cordova platform add android",
+        "reinstall-current": "cordova plugin remove com.virtuoworks.cordova-plugin-canvascamera && npm run install-current",
+        "install-latest": "cordova plugin add git+https://github.com/VirtuoWorks/CanvasCameraPlugin.git && cordova platform remove android && cordova platform add android",
+        "reinstall-latest": "cordova plugin remove com.virtuoworks.cordova-plugin-canvascamera && npm run install-latest"
     },
     "devDependencies": {
-        "cordova": "^10.0.0",
-        "cordova-android": "^10.1.1",
-        "npm-check-updates": "^11.8.5"
+        "com.virtuoworks.cordova-plugin-canvascamera": "github:VirtuoWorks/CanvasCameraPlugin",
+        "cordova": "^11.0.0",
+        "cordova-android": "^10.1.2",
+        "npm-check-updates": "^12.5.8"
     }
 }
