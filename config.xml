@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.canvascamerademo" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>CanvasCameraDemo</name>
+<widget id="com.virtuoworks.CanvasCameraCordovaDemo" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>canvascamera-cordova-demo</name>
     <description>
         A sample Apache Cordova application that uses the canvas camera plugin.
     </description>

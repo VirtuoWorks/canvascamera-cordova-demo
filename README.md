@@ -21,9 +21,9 @@ A sample Apache Cordova application that uses the CanvasCamera plugin.
 ### Clone the repository :
 
 ```bash
-git clone https://github.com/VirtuoWorks/CanvasCameraDemo.git
+git clone https://github.com/VirtuoWorks/canvascamera-cordova-demo.git
 # goto CanvasCameraDemo directory
-cd CanvasCameraDemo
+cd canvascamera-cordova-demo
 ```
 
 ### Add platforms :
@@ -75,7 +75,7 @@ cordova plugin remove com.virtuoworks.cordova-plugin-canvascamera
 ### Try to install Canvas Camera plugin :
 
 ```bash
-cordova plugin add https://github.com/VirtuoWorks/CanvasCameraPlugin.git && cordova prepare
+cordova plugin add com.virtuoworks.cordova-plugin-canvascamera && cordova prepare
 ```
 
 *Notice :* This will not work after having prepared any platform while using npm >=5. The plugin is already installed as a project dependency (check your ```\plugins\``` directory). The latest npm dependency management system uses a ```package-lock.json``` file which will prevent you from installing the plugin again.
