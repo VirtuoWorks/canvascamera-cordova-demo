@@ -20,6 +20,6 @@
         "com.virtuoworks.cordova-plugin-canvascamera": "^1.2.2",
         "cordova": "^11.0.0",
         "cordova-android": "^10.1.2",
-        "npm-check-updates": "^12.5.8"
+        "npm-check-updates": "^12.5.11"
     }
 }
